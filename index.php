@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ETEC APP</title>
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/typebase.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/grid.css">
+  <link rel="stylesheet" href="/assets/css/nav.css">
+  <link rel="stylesheet" href="/assets/css/detail.css">
+</head>
+<body class="">
+  <!-- ICONS -->
+  <div class="global-container">
+    <div class="container">
+      <div class="grid">
+        <?php for ($i=0; $i < 40; $i++) { ?>
+            <div 
+              class="grid-element background-settings back-<?= $i % 10?> js-icon"
+              data-icon-number="<?= $i ?>"
+            >
+            <!-- nothing here -->
+            </div>
+          <?php } ?>
+          
+          <div class="nav-buttons-spacer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDOS -->
+  <div class="global-container detail">
+    <div class="container">
+      <div class="detail-container">
+
+        <?php for ($i=0; $i < 1; $i++) { ?>
+          <h2>History</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Eligendi accusantium praesentium officia vel reiciendis sint soluta necessitatibus <br />
+            quasi ipsum dolorum, dicta, iste quos, omnis repellendus mollitia suscipit <br />
+            aperiam quaerat nulla?
+          </p>
+<!--
+          <h3>In action</h3>
+          <video 
+            data-lazy-vid="https://player.vimeo.com/progressive_redirect/playback/1000168848/rendition/2160p/file.mp4?loc=external&amp;log_user=0&amp;signature=82595c8838deb1d2ee12a751c0dc37ce77f566f16c9553f4ba58f8d0cdd66243" 
+            autoplay="" loop="" muted="" data-toggle-vid="" playsinline="" preload="auto" 
+            src="https://player.vimeo.com/progressive_redirect/playback/1000168848/rendition/2160p/file.mp4?loc=external&amp;log_user=0&amp;signature=82595c8838deb1d2ee12a751c0dc37ce77f566f16c9553f4ba58f8d0cdd66243">
+          </video>
+
+          <h3>Some Facts</h3>
+          <ul>
+            <li>The first item in a list</li>
+            <li>Hey, it's the second!</li>
+            <li>What have you heard about the third?</li>
+            <li>Well everone has heard that the third is the word</li>
+          </ul>
+
+          <ol>
+            <li>The first item in a list</li>
+            <li>Hey, it's the second!</li>
+            <li>What have you heard about the third?</li>
+            <li>Well everone has heard that the third is the word</li>
+          </ol>
+
+          <h3>Blockquote</h3>
+          <blockquote>
+            Wow, this quote is so wonderful. I hope cheese quickly zaps a large mule.
+          </blockquote>
+
+          <h3>Article</h3>
+          <article>
+            <header>
+              <h4>
+                This is header inside an <code>article</code>.
+              </h4>
+            </header>
+
+            <p>
+              And a <code>paragraph</code> following the header
+            </p>
+          </article>
+-->
+          
+
+        <?php } ?>
+        <div class="nav-buttons-spacer"></div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav-buttons">
+    <div class="back-icon"></div>
+    <!-- <div class="back-icon"></div>
+    <div class="back-icon"></div> -->
+  </div>
+
+  <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+  <script src="/assets/vendor/gsap/minified/gsap.min.js"></script>
+  <script src="/assets/vendor/dragscroll.js"></script>
+
+  <!-- global functions -->
+  <script src="/assets/js/helpers.js"></script>
+
+  <script src="/assets/js/details.js"></script>
+
+  <script src="/assets/js/actions.js"></script>
+</body>
+</html>

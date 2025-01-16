@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5%; 
+  width: 100%;
+}
+
+.grid-element {
+  aspect-ratio: 1;
+  font-size: 2rem;
+}
+
+.background-settings {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.back-0 {
+  background-image: url('/assets/images/alarm.png');
+}
+
+.back-1 {
+  background-image: url('/assets/images/audio_recorder.png');
+}
+
+.back-2 {
+  background-image: url('/assets/images/calculator.png');
+}
+
+.back-3 {
+  background-image: url('/assets/images/calendar_agenda.png');
+}
+
+.back-4 {
+  background-image: url('/assets/images/camera.png');
+}
+
+.back-5 {
+  background-image: url('/assets/images/email_fax.png');
+}
+
+.back-6 {
+  background-image: url('/assets/images/maps_gps.png');
+}
+
+.back-7 {
+  background-image: url('/assets/images/phone.png');
+}
+
+.back-8 {
+  background-image: url('/assets/images/radio.png');
+}
+
+.back-9 {
+  background-image: url('/assets/images/youtube.png');
+}
+
