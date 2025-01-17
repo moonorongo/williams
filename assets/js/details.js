@@ -1,6 +1,3 @@
-    // Detail container listeners
-    var $globalContainerDetail = document.querySelector('.global-container.detail')
-    var $detailContainer = $globalContainerDetail.querySelector('.detail-container')
 
     // enable dragscroll on body
     enableScrollOnDetail(false)

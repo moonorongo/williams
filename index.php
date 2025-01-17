@@ -13,7 +13,7 @@
 </head>
 <body class="">
   <!-- ICONS -->
-  <div class="global-container">
+  <div class="global-container icons">
     <div class="container">
       <div class="grid">
         <?php for ($i=0; $i < 40; $i++) { ?>
@@ -34,24 +34,24 @@
   <div class="global-container detail">
     <div class="container">
       <div class="detail-container">
-
-        <?php for ($i=0; $i < 1; $i++) { ?>
-          <h2>History</h2>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          
+          <h3>Paragraph</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-            Eligendi accusantium praesentium officia vel reiciendis sint soluta necessitatibus <br />
-            quasi ipsum dolorum, dicta, iste quos, omnis repellendus mollitia suscipit <br />
-            aperiam quaerat nulla?
+            This is an example of paragraph text. <br />
+            Eligendi accusantium praesentium officia vel reiciendis sint soluta necessitatibus quasi ipsum dolorum, dicta, iste quos, omnis repellendus mollitia suscipit aperiam quaerat nulla?
           </p>
-<!--
-          <h3>In action</h3>
+
+          <h3>Video</h3>
           <video 
             data-lazy-vid="https://player.vimeo.com/progressive_redirect/playback/1000168848/rendition/2160p/file.mp4?loc=external&amp;log_user=0&amp;signature=82595c8838deb1d2ee12a751c0dc37ce77f566f16c9553f4ba58f8d0cdd66243" 
             autoplay="" loop="" muted="" data-toggle-vid="" playsinline="" preload="auto" 
             src="https://player.vimeo.com/progressive_redirect/playback/1000168848/rendition/2160p/file.mp4?loc=external&amp;log_user=0&amp;signature=82595c8838deb1d2ee12a751c0dc37ce77f566f16c9553f4ba58f8d0cdd66243">
           </video>
 
-          <h3>Some Facts</h3>
+          <h3>Unordered list</h3>
           <ul>
             <li>The first item in a list</li>
             <li>Hey, it's the second!</li>
@@ -59,6 +59,7 @@
             <li>Well everone has heard that the third is the word</li>
           </ul>
 
+          <h3>Ordered list</h3>
           <ol>
             <li>The first item in a list</li>
             <li>Hey, it's the second!</li>
@@ -74,19 +75,18 @@
           <h3>Article</h3>
           <article>
             <header>
-              <h4>
+              <h3>
                 This is header inside an <code>article</code>.
-              </h4>
+              </h3>
             </header>
 
             <p>
               And a <code>paragraph</code> following the header
             </p>
           </article>
--->
           
 
-        <?php } ?>
+
         <div class="nav-buttons-spacer"></div>
       </div>
       
@@ -103,6 +103,9 @@
   <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
   <script src="/assets/vendor/gsap/minified/gsap.min.js"></script>
   <script src="/assets/vendor/dragscroll.js"></script>
+
+  <!-- global vars -->
+  <script src="/assets/js/global-vars.js"></script>
 
   <!-- global functions -->
   <script src="/assets/js/helpers.js"></script>

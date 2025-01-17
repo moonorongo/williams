@@ -16,8 +16,7 @@
 
 .global-container.detail .detail-container {
   padding: 1% 5%;
-  background-color: yellow;
-  /* overflow-y: auto; */
+  background-color: white;
   overflow: hidden; 
 }
 
@@ -30,7 +29,3 @@
   display: block;
   opacity: 0;
 }
-
-/* .global-container.detail.show {
-  display: block;
-} */

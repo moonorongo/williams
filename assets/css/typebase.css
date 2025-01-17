@@ -2,8 +2,8 @@
 /* Setup */
 html {
   /* Change default typefaces here */
-  font-family: serif;
-  font-size: 200%;
+  font-family: sans-serif;
+  font-size: 90%;
   -webkit-font-smoothing: antialiased;
 }
 /* Copy & Lists */
