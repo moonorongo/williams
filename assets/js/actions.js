@@ -35,6 +35,23 @@
           duration: 0.5
         });
 
+        // Add all Scrolltriggers
+        $globalContainerDetail
+          .querySelectorAll('video')
+          .forEach((videoElem,index) => {
+            const videoId = `video${index}`
+            videoElem.id = videoId
+
+            ScrollTrigger.create({
+              trigger: `#${videoId}`,
+              onEnter: () => videoElem.play(),
+              onEnterBack: () => videoElem.play(),
+              onLeave: () => videoElem.pause(),
+              onLeaveBack: () => videoElem.pause(),
+            });
+          });
+ 
+
       })
     });
 
@@ -43,6 +60,10 @@
     $back.addEventListener('click', (e) => {
       enableScrollOnDetail(false)
 
+      // Remove all Scrolltriggers
+      ScrollTrigger.killAll()
+
+      // detail animations
       gsap.fromTo($globalContainerDetail, { 
         opacity: 1, 
         scale: 1,

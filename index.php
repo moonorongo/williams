@@ -44,13 +44,6 @@
             Eligendi accusantium praesentium officia vel reiciendis sint soluta necessitatibus quasi ipsum dolorum, dicta, iste quos, omnis repellendus mollitia suscipit aperiam quaerat nulla?
           </p>
 
-          <h3>Video</h3>
-          <video 
-            data-lazy-vid="https://player.vimeo.com/progressive_redirect/playback/1000168848/rendition/2160p/file.mp4?loc=external&amp;log_user=0&amp;signature=82595c8838deb1d2ee12a751c0dc37ce77f566f16c9553f4ba58f8d0cdd66243" 
-            autoplay="" loop="" muted="" data-toggle-vid="" playsinline="" preload="auto" 
-            src="https://player.vimeo.com/progressive_redirect/playback/1000168848/rendition/2160p/file.mp4?loc=external&amp;log_user=0&amp;signature=82595c8838deb1d2ee12a751c0dc37ce77f566f16c9553f4ba58f8d0cdd66243">
-          </video>
-
           <h3>Unordered list</h3>
           <ul>
             <li>The first item in a list</li>
@@ -66,6 +59,13 @@
             <li>What have you heard about the third?</li>
             <li>Well everone has heard that the third is the word</li>
           </ol>
+
+          <h3>Video</h3>
+          <video 
+            loop="" playsinline="" preload="auto" 
+            src="/assets/videos/sample1.mp4">
+          </video>
+
 
           <h3>Blockquote</h3>
           <blockquote>
@@ -102,7 +102,12 @@
 
   <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
   <script src="/assets/vendor/gsap/minified/gsap.min.js"></script>
+  <script src="/assets/vendor/ScrollTrigger.min.js"></script>
   <script src="/assets/vendor/dragscroll.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+  </script>
 
   <!-- global vars -->
   <script src="/assets/js/global-vars.js"></script>
