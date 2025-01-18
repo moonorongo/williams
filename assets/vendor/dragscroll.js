@@ -24,7 +24,7 @@
     var EventListener = 'EventListener';
     var addEventListener = 'add'+EventListener;
     var removeEventListener = 'remove'+EventListener;
-    var newScrollX, newScrollY;
+    var newScrollX, newScrollY, oldScrollY;
 
     var dragged = [];
 
@@ -75,11 +75,14 @@
                                 // console.log('pushed');
                             }
 
+                            oldScrollY = newScrollY; 
 
                             (scroller = el.scroller||el).scrollLeft -=
                                 newScrollX = (- lastClientX + (lastClientX=e.clientX));
+
                             scroller.scrollTop -=
                                 newScrollY = (- lastClientY + (lastClientY=e.clientY));
+
                             if (el == _document.body) {
                                 (scroller = _document.documentElement).scrollLeft -= newScrollX;
                                 scroller.scrollTop -= newScrollY;
@@ -87,19 +90,13 @@
                         } else {
                             if(scrollingFlag) {
                                 scrollingFlag = false;
-                                scrolling = false;
+                                // scrolling = false;
+
+                                console.log('released,', oldScrollY, newScrollY);
                                 setTimeout(function() {
-                                    console.log('released');
                                     scrolling = false;
                                 }, 100);
                             }
-
-                            /*
-                            setTimeout(function() {
-                                // mejorar toda esta basura... esto se esta ejecutando un millon de veces
-                                scrolling = false;
-                            }, 500);
-                            */
                         }
                     }, 0
                 );

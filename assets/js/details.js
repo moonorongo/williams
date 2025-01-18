@@ -1,6 +1,6 @@
 
     // enable dragscroll on body
-    enableScrollOnDetail(false)
+    // enableScrollOnDetail(false)
 
     window.onresize = () => {
       $detailContainer.style.maxHeight = `${window.innerHeight}px`

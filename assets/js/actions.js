@@ -4,11 +4,11 @@
     $icons.forEach(icon => {
       icon.addEventListener('click', (e) => {
 
-        if(dragscroll.getScrollingStatus()) {
-          return
-        }
+        // if(dragscroll.getScrollingStatus()) {
+        //   return
+        // }
 
-        enableScrollOnDetail(true)
+        // enableScrollOnDetail(true)
 
         // detail animation
         gsap.fromTo($globalContainerDetail, { 
@@ -58,7 +58,7 @@
     // back click actions
     const $back = document.querySelector('.back-icon')
     $back.addEventListener('click', (e) => {
-      enableScrollOnDetail(false)
+      // enableScrollOnDetail(false)
 
       // Remove all Scrolltriggers
       ScrollTrigger.killAll()

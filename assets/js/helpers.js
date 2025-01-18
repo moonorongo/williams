@@ -1,3 +1,6 @@
+/*
+// esto lo usaba dragscroll, no creo q lo necesitemos mas
+
 function enableScrollOnDetail(status) {
     if(status) {
       document.querySelector('body').classList.remove('dragscroll')
@@ -9,3 +12,4 @@ function enableScrollOnDetail(status) {
 
     dragscroll.reset()
   }
+  */

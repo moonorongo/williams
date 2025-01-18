@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="/assets/css/grid.css">
   <link rel="stylesheet" href="/assets/css/nav.css">
   <link rel="stylesheet" href="/assets/css/detail.css">
+  <!-- <link rel="stylesheet" href="/assets/css/lenis.css"> -->
 </head>
 <body class="">
   <!-- ICONS -->
-  <div class="global-container icons">
+  <div class="global-container icons y-scroll">
     <div class="container">
       <div class="grid">
         <?php for ($i=0; $i < 40; $i++) { ?>
@@ -33,7 +34,7 @@
   <!-- CONTENIDOS -->
   <div class="global-container detail">
     <div class="container">
-      <div class="detail-container">
+      <div class="detail-container y-scroll">
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
           <h3>Heading 3</h3>
@@ -100,13 +101,27 @@
     <div class="back-icon"></div> -->
   </div>
 
-  <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/assets/vendor/mobilelikescroller.js"></script>
+
   <script src="/assets/vendor/gsap/minified/gsap.min.js"></script>
   <script src="/assets/vendor/ScrollTrigger.min.js"></script>
-  <script src="/assets/vendor/dragscroll.js"></script>
+  <!-- <script src="/assets/vendor/dragscroll.js"></script> -->
+  <!-- <script src="/assets/vendor/lenis.min.js"></script> -->
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
+/*
+    // Initialize Lenis
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+
+    // Listen for the scroll event and log the event data
+    lenis.on('scroll', (e) => {
+      console.log(e);
+    });
+*/
   </script>
 
   <!-- global vars -->
@@ -114,6 +129,8 @@
 
   <!-- global functions -->
   <script src="/assets/js/helpers.js"></script>
+
+      
 
   <script src="/assets/js/details.js"></script>
 
