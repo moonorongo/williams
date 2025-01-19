@@ -85,7 +85,7 @@
 
     $icons.forEach(icon => {
       icon.addEventListener('click', (e) => {
-        globalStore.detailOpen = true;
+        globalStore.isDetailOpen = true;
         showDetailContainer();
       })
     });
@@ -93,6 +93,7 @@
     // back click actions
     const $back = document.querySelector('.back-icon')
     $back.addEventListener('click', (e) => {
-      globalStore.detailOpen = false;
+      if(globalStore.isDetailOpen)
       hideDetailContainer()
+      globalStore.isDetailOpen = false;
     })

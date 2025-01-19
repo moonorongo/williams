@@ -4,5 +4,5 @@
     var $detailContainer = $globalContainerDetail.querySelector('.detail-container')
 
     var globalStore = {
-        detailOpen : false
+        isDetailOpen : false
     }
