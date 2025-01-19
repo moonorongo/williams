@@ -1,3 +1,6 @@
+<?php 
+  include("include/lib/index.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,17 +19,8 @@
   <div class="global-container icons y-scroll">
     <div class="container">
       <div class="grid">
-          <!--
-            <?php // for ($i=0; $i < 40; $i++) { ?>
-              <div 
-                class="grid-element background-settings back-<?= $i % 10?> js-icon"
-                data-icon-number="<?= $i ?>"
-              ></div>
-            <?php // } ?>
-          -->
-            
           <?php
-            build_navigation();
+            show_navigation_items();
           ?>
           <!-- extra spacing -->
           <div class="grid-element background-settings"></div>
@@ -43,7 +37,7 @@
     <div class="container">
       <div id="detail-container" class="detail-container y-scroll">
         <?php
-          // build_details();
+          show_details();
         ?>
 
         <div class="nav-buttons-spacer"></div>
@@ -74,12 +68,11 @@
 
   <!-- global functions -->
   <script src="/assets/js/helpers.js"></script>
+     
 
-      
-
+  <!-- Details -->
   <script src="/assets/js/details.js"></script>
-
-  <script src="/assets/js/actions.js"></script>
+  <script src="/assets/js/details-actions.js"></script>
 
   <script>
     // init

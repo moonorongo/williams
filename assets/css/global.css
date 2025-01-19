@@ -17,3 +17,7 @@ body {
   background-color: floralwhite;
 }
 
+.hidden {
+  display: none;
+}
+

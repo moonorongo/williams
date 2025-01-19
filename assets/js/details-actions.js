@@ -1,6 +1,18 @@
+    const showContent = (number) => {
+      document.querySelector(`.detail-contents[data-number="${number}"]`).classList.remove('hidden')
+    }
+
+    const hideAllContents = () => {
+      document.querySelectorAll(`.detail-contents`).forEach(element => {
+        element.classList.add('hidden')
+      });
+    }
+
     // Show Detail Container
-    const showDetailContainer = () => {
-      // detail animation
+    const showDetailContainer = (number) => {
+      showContent(number); 
+
+      // detail entry animation
       gsap.fromTo($globalContainerDetail, { 
         opacity: 0, 
         scale: .85,
@@ -14,7 +26,7 @@
         }
       });
 
-      // icons animation
+      // icons out animation
       gsap.fromTo($globalContainerIcons, { 
         opacity: 1, 
         scale: 1,
@@ -29,7 +41,6 @@
       $globalContainerDetail
         .querySelectorAll('video')
         .forEach((videoElem,index) => {
-          console.log(videoElem)
           const videoId = `video${index}`
           videoElem.id = videoId
 
@@ -50,10 +61,12 @@
 
     // Hide Detail Container
     const hideDetailContainer = () => {
+      hideAllContents()
+
       // Remove all Scrolltriggers
       ScrollTrigger.killAll()
 
-      // detail animations
+      // detail out animations
       gsap.fromTo($globalContainerDetail, { 
         opacity: 1, 
         scale: 1,
@@ -67,7 +80,7 @@
         }
       });
 
-      // icons animation
+      // icons entry animation
       gsap.fromTo($globalContainerIcons, { 
         opacity: 0, 
         scale: .85,
@@ -86,7 +99,7 @@
     $icons.forEach(icon => {
       icon.addEventListener('click', (e) => {
         globalStore.isDetailOpen = true;
-        showDetailContainer();
+        showDetailContainer(e.currentTarget.dataset.number);
       })
     });
 
