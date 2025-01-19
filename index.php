@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="/assets/css/grid.css">
   <link rel="stylesheet" href="/assets/css/nav.css">
   <link rel="stylesheet" href="/assets/css/detail.css">
-  <!-- <link rel="stylesheet" href="/assets/css/lenis.css"> -->
 </head>
 <body class="">
   <!-- ICONS -->
   <div class="global-container icons y-scroll">
     <div class="container">
+      <div class="nav-buttons-spacer"></div>
       <div class="grid">
         <?php for ($i=0; $i < 40; $i++) { ?>
             <div 
@@ -25,20 +25,26 @@
             <!-- nothing here -->
             </div>
           <?php } ?>
-          
-          <div class="nav-buttons-spacer"></div>
       </div>
+      <div class="nav-buttons-spacer"></div>
     </div>
   </div>
 
   <!-- CONTENIDOS -->
   <div class="global-container detail">
     <div class="container">
-      <div class="detail-container y-scroll">
+      <div id="detail-container" class="detail-container y-scroll">
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
           <h3>Heading 3</h3>
-          
+
+          <h3>Video</h3>
+          <video 
+            loop="" playsinline="" preload="auto" 
+            src="/assets/videos/sample1.mp4">
+          </video>
+
+
           <h3>Paragraph</h3>
           <p>
             This is an example of paragraph text. <br />
@@ -88,6 +94,35 @@
           
 
 
+          <!-- EXTRA TEST -->
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          
+          <h3>Paragraph</h3>
+          <p>
+            This is an example of paragraph text. <br />
+            Eligendi accusantium praesentium officia vel reiciendis sint soluta necessitatibus quasi ipsum dolorum, dicta, iste quos, omnis repellendus mollitia suscipit aperiam quaerat nulla?
+          </p>
+
+          <h3>Unordered list</h3>
+          <ul>
+            <li>The first item in a list</li>
+            <li>Hey, it's the second!</li>
+            <li>What have you heard about the third?</li>
+            <li>Well everone has heard that the third is the word</li>
+          </ul>
+
+          <h3>Ordered list</h3>
+          <ol>
+            <li>The first item in a list</li>
+            <li>Hey, it's the second!</li>
+            <li>What have you heard about the third?</li>
+            <li>Well everone has heard that the third is the word</li>
+          </ol>
+
+
+
         <div class="nav-buttons-spacer"></div>
       </div>
       
@@ -106,22 +141,9 @@
 
   <script src="/assets/vendor/gsap/minified/gsap.min.js"></script>
   <script src="/assets/vendor/ScrollTrigger.min.js"></script>
-  <!-- <script src="/assets/vendor/dragscroll.js"></script> -->
-  <!-- <script src="/assets/vendor/lenis.min.js"></script> -->
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
-/*
-    // Initialize Lenis
-    const lenis = new Lenis({
-      autoRaf: true,
-    });
-
-    // Listen for the scroll event and log the event data
-    lenis.on('scroll', (e) => {
-      console.log(e);
-    });
-*/
   </script>
 
   <!-- global vars -->
@@ -135,5 +157,9 @@
   <script src="/assets/js/details.js"></script>
 
   <script src="/assets/js/actions.js"></script>
+
+  <script>
+    // showDetailContainer();
+  </script>
 </body>
 </html>
