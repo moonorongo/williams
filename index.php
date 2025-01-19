@@ -15,18 +15,21 @@
   <!-- ICONS -->
   <div class="global-container icons y-scroll">
     <div class="container">
-      <div class="nav-buttons-spacer"></div>
       <div class="grid">
         <?php for ($i=0; $i < 40; $i++) { ?>
             <div 
               class="grid-element background-settings back-<?= $i % 10?> js-icon"
               data-icon-number="<?= $i ?>"
-            >
-            <!-- nothing here -->
-            </div>
+            ></div>
           <?php } ?>
+
+          <!-- extra spacing -->
+          <div class="grid-element background-settings"></div>
+          <div class="grid-element background-settings"></div>
+          <div class="grid-element background-settings"></div>
+          <div class="grid-element background-settings"></div>
       </div>
-      <div class="nav-buttons-spacer"></div>
+
     </div>
   </div>
 
@@ -159,6 +162,8 @@
   <script src="/assets/js/actions.js"></script>
 
   <script>
+    // init
+    window.scrollTo(0,0)
     // showDetailContainer();
   </script>
 </body>
