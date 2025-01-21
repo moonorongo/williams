@@ -15,8 +15,15 @@
   <link rel="stylesheet" href="/assets/css/detail.css">
 </head>
 <body class="">
+  <!-- Full Screen Start button -->
+  <!-- <button type="button" id="start-button">Tap to start</button> -->
+
+  <div id="start-button" class="centered-container">
+    <div class="centered-content">Tap to start</div>
+  </div>
+
   <!-- ICONS -->
-  <div class="global-container icons y-scroll">
+  <div class="global-container icons y-scroll hidden">
     <div class="container">
       <div class="grid">
           <?php
@@ -76,6 +83,12 @@
 
   <script>
     // init
+    document.querySelector('#start-button').addEventListener('click', (e) => {
+      document.querySelector('body').requestFullscreen();
+      e.currentTarget.remove();
+      $globalContainerIcons.classList.remove('hidden');
+    }, {once : true})
+
     window.scrollTo(0,0)
     // showDetailContainer();
   </script>

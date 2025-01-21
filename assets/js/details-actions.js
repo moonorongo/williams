@@ -5,6 +5,9 @@
     const hideAllContents = () => {
       document.querySelectorAll(`.detail-contents`).forEach(element => {
         element.classList.add('hidden')
+        element.querySelectorAll('video').forEach(videoElement => {
+          videoElement.pause();
+        });
       });
     }
 
@@ -49,7 +52,7 @@
             trigger: `#${videoId}`,
             start: '90% 90%',
             end: '90% 10%',
-            markers: true,
+            // markers: true,
             onEnter: () => videoElem.play(),
             onEnterBack: () => videoElem.play(),
             onLeave: () => videoElem.pause(),
@@ -65,6 +68,9 @@
 
       // Remove all Scrolltriggers
       ScrollTrigger.killAll()
+
+      // pause all videos
+
 
       // detail out animations
       gsap.fromTo($globalContainerDetail, { 
