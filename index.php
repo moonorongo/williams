@@ -78,11 +78,14 @@
      
 
   <!-- Details -->
+  <script src="/assets/js/gpio-class.js"></script>
   <script src="/assets/js/details.js"></script>
   <script src="/assets/js/details-actions.js"></script>
 
   <script>
     // init
+    GPIO.reset()
+    
     document.querySelector('#start-button').addEventListener('click', (e) => {
       document.querySelector('body').requestFullscreen();
       e.currentTarget.remove();

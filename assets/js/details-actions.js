@@ -1,8 +1,14 @@
     const showContent = (number) => {
-      document.querySelector(`.detail-contents[data-number="${number}"]`).classList.remove('hidden')
+      const $detailContainer = document.querySelector(`.detail-contents[data-number="${number}"]`)
+      const detailConfig = JSON.parse($detailContainer.dataset.config)
+      $detailContainer.classList.remove('hidden')
+
+      GPIO.turnOn(detailConfig.gpio_pin)
     }
 
     const hideAllContents = () => {
+      GPIO.reset()
+
       document.querySelectorAll(`.detail-contents`).forEach(element => {
         element.classList.add('hidden')
         element.querySelectorAll('video').forEach(videoElement => {
