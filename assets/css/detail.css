@@ -29,3 +29,10 @@
   display: block;
   opacity: 0;
 }
+
+
+.global-container.detail .detail-container img {
+  width: auto;
+  max-width: -webkit-fill-available;
+  margin: 2rem 0 .5rem;
+}

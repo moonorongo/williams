@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ETEC APP</title>
+  <title>Convergencia</title>
   <link rel="stylesheet" href="/assets/css/normalize.css">
   <link rel="stylesheet" href="/assets/css/typebase.css">
   <link rel="stylesheet" href="/assets/css/global.css">
