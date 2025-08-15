@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Convergencia</title>
   <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
   <link rel="stylesheet" href="/assets/css/typebase.css">
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/grid.css">
@@ -15,18 +16,17 @@
   <link rel="stylesheet" href="/assets/css/detail.css">
 </head>
 <body class="">
+  <!-- 
+    Resolucion monitor
+    1080 x 1920   
+  -->
   <!-- Full Screen Start button -->
-  <!-- <button type="button" id="start-button">Tap to start</button> -->
-<!-- 
-  Resolucion monitor
-  1080 x 1920   
--->
   <div id="start-button" class="centered-container">
     <div class="centered-content">Tap to start</div>
   </div>
 
   <!-- ICONS -->
-  <div class="global-container icons y-scroll hidden">
+  <div class="global-container icons y-scroll hidden" style="margin-top: 20%;">
     <div class="container">
       <div class="grid">
           <?php
@@ -56,8 +56,12 @@
     </div>
   </div>
 
-  <!-- NAV -->
-  <div class="nav-buttons">
+  <!-- NAVs -->
+  <div class="nav-buttons top-nav">
+    <!-- nav goes here? -->
+  </div>
+
+  <div class="nav-buttons bottom-nav">
     <div class="back-icon"></div>
     <!-- <div class="back-icon"></div>
     <div class="back-icon"></div> -->
@@ -89,6 +93,10 @@
     // init
     GPIO.reset()
     
+    // DEV - remove START FS button - remove on prod
+    document.querySelector('#start-button').remove()
+    $globalContainerIcons.classList.remove('hidden');
+
     document.querySelector('#start-button').addEventListener('click', (e) => {
       document.querySelector('body').requestFullscreen();
       e.currentTarget.remove();
