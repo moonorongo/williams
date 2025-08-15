@@ -17,7 +17,10 @@
 <body class="">
   <!-- Full Screen Start button -->
   <!-- <button type="button" id="start-button">Tap to start</button> -->
-
+<!-- 
+  Resolucion monitor
+  1080 x 1920   
+-->
   <div id="start-button" class="centered-container">
     <div class="centered-content">Tap to start</div>
   </div>
