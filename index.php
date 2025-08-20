@@ -33,10 +33,10 @@
             show_navigation_items();
           ?>
           <!-- extra spacing -->
-          <div class="grid-element background-settings"></div>
-          <div class="grid-element background-settings"></div>
-          <div class="grid-element background-settings"></div>
-          <div class="grid-element background-settings"></div>
+          <div class="grid-element"></div>
+          <div class="grid-element"></div>
+          <div class="grid-element"></div>
+          <div class="grid-element"></div>
       </div>
 
     </div>
@@ -97,11 +97,11 @@
     document.querySelector('#start-button').remove()
     $globalContainerIcons.classList.remove('hidden');
 
-    document.querySelector('#start-button').addEventListener('click', (e) => {
-      document.querySelector('body').requestFullscreen();
-      e.currentTarget.remove();
-      $globalContainerIcons.classList.remove('hidden');
-    }, {once : true})
+    // document.querySelector('#start-button').addEventListener('click', (e) => {
+    //   document.querySelector('body').requestFullscreen();
+    //   e.currentTarget.remove();
+    //   $globalContainerIcons.classList.remove('hidden');
+    // }, {once : true})
 
     window.scrollTo(0,0)
     // showDetailContainer();
