@@ -26,18 +26,26 @@
   </div>
 
   <!-- ICONS -->
-  <div class="global-container icons y-scroll hidden" style="margin-top: 20%;">
+  <div class="global-container icons y-scroll hidden" style="margin-top: 30%;">
     <div class="container">
+      <table class="grid-table">
+      <?php
+        show_navigation_rows() 
+      ?>
+      </table>
+
+<!--
       <div class="grid">
           <?php
-            show_navigation_items();
+            // show_navigation_items();
           ?>
-          <!-- extra spacing -->
           <div class="grid-element"></div>
           <div class="grid-element"></div>
           <div class="grid-element"></div>
           <div class="grid-element"></div>
       </div>
+-->
+
 
     </div>
   </div>
@@ -58,7 +66,7 @@
 
   <!-- NAVs -->
   <div class="nav-buttons top-nav">
-    <!-- nav goes here? -->
+    <img src="./assets/images/elements/top_nav_background.png" />
   </div>
 
   <div class="nav-buttons bottom-nav">
