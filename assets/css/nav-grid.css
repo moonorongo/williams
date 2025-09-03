@@ -1,0 +1,17 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 5vh;
+}
+
+.grid-item {
+  background-color: chartreuse;
+  width: 20vw;
+  aspect-ratio: 1/1;
+}
