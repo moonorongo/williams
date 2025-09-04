@@ -2,30 +2,68 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: red;
+  background-color: var(--main-bg-bottom-color);
+}
 
+.global-container.show-detail .main-nav-container {
+    transform: scale(1.3);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.global-container.show-detail .detail-container {
+    top: 10vh;
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
 }
 
 .top-bar-container {
+  position: absolute;
   width: 100%;
   height: 10vh;
   background-color: var(--main-bg-top-nav-color);
   color: white;
+  z-index: 100;
 }
 
 .bottom-bar-container {
+  position: absolute;
   width: 100%;
   height: 10vh;
   background-color: var(--main-bg-bottom-nav-color);
   color: white;
-  position: absolute;
   bottom: 0;
+  z-index: 100;
 }
 
 
 .main-nav-container {
+    position: absolute;
     width: 100vw;
     height: 80vh;
-    background-color: green;
     padding: 5vh 0;
+    z-index: 99;
+    top: 10vh;
+
+    /* animations */
+    transition: all 0.5s ease 0s;
 }
+
+.detail-container {
+    position: absolute;
+    width: 80vw;
+    padding: 0 6vh;
+    z-index: 98;
+
+    /* animations */
+    transition: all 0.5s ease 0s;
+
+    /* animations initial state */
+    top: -30vh;
+    transform: scale(.75);
+    opacity: 0;
+    pointer-events: none;
+}
+
+

@@ -1,5 +1,6 @@
 class SwipeScroller {
     constructor(element) {
+        window.scrollTo(0,0)
         this.$el = element;
         this.$track = this.$el.querySelector('.track');
 
@@ -11,7 +12,7 @@ class SwipeScroller {
 
         // Wait for images to load to ensure accurate maxHeight calculation
         window.addEventListener('load', () => {
-            this.maxHeight = -(this.$el.clientHeight - window.innerHeight);
+            this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - 800; // 800px extra space at the bottom  
             this.bindEvents();
             this.animate();
         });
@@ -22,47 +23,6 @@ class SwipeScroller {
             this.resetScroll();
         }, 100);
     }
-
-/*
-    bindEvents() {
-        const onDown = (e) => {
-            this.dragging = true;
-            this.velocity = this.velocity > 0 ? 1 : -1; // set velocity to 1 or -1 based on current value
-
-            this.startX = this.getEventX(e);
-            this.lastX = this.startX;
-        };
-
-        const onMove = (e) => {
-            if (!this.dragging) return;
-
-            const x = this.getEventX(e);
-            const dx = x - this.lastX;
-            this.lastX = x;
-            this.velocity = dx;
-        };
-
-        const onUp = () => {
-            this.dragging = false;
-        };
-
-
-        // Mouse
-        this.$el.addEventListener('mousedown', onDown);
-        window.addEventListener('mousemove', onMove);
-        window.addEventListener('mouseup', onUp);
-
-        // Touch
-        this.$el.addEventListener('touchstart', onDown);
-        window.addEventListener('touchmove', onMove, { passive: false });
-        window.addEventListener('touchend', onUp);
-
-        // Update this.maxHeight on resize window
-        window.addEventListener('resize', () => {
-            this.maxHeight = -(this.$el.clientHeight - window.innerHeight);
-        })
-    }
-*/
 
     bindEvents() {
         const onDown = (e) => {
