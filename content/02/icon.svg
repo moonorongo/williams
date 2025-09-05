@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1504 1428.89">
+  <!-- Generator: Adobe Illustrator 29.5.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 137)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st3 {
+        fill: #ef9136;
+      }
+
+      .st4 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st1" x="14.04" y="13.32" width="1479.3" height="1403.31"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <path class="st1" d="M44.03,13.32h1418.8c7.95,0,15.58,3.16,21.21,8.79s8.79,13.26,8.79,21.21v1343.32c0,7.95-3.16,15.58-8.79,21.21s-13.26,8.79-21.21,8.79H44.03c-7.95,0-15.58-3.16-21.21-8.79s-8.79-13.26-8.79-21.21V43.32c0-7.96,3.16-15.59,8.79-21.21s13.26-8.79,21.21-8.79Z"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st1" x="392.25" y="252.78" width="714.43" height="921.89"/>
+    </clipPath>
+  </defs>
+  <g id="_x36_dc84268b9">
+    <g class="st5">
+      <g class="st2">
+        <path class="st3" d="M14.04,13.32h1480.05v1403.31H14.04V13.32Z"/>
+      </g>
+    </g>
+    <g class="st4">
+      <path class="st0" d="M1106.68,1104.76c0-245.92-160.06-445.16-357.21-445.16s-357.21,199.24-357.21,445.16c0,38.35,160.06,69.61,357.21,69.61s357.21-31.26,357.21-69.61ZM749.46,252.79c107.54,0,194.66,87.11,194.66,194.65s-87.12,194.66-194.66,194.66-194.66-87.11-194.66-194.66,87.11-194.65,194.66-194.65Z"/>
+    </g>
+  </g>
+</svg>

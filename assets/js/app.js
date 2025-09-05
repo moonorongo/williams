@@ -9,7 +9,8 @@ class App {
 
     buildComponents() {
         this.components = {
-            'SwipeScroller': SwipeScroller
+            'SwipeScroller': SwipeScroller,
+            'MainNav' : MainNav
         }
     }
 

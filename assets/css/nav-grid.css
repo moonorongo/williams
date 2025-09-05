@@ -7,17 +7,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 
 .grid-item {
-  /* background-color: chartreuse; */
-  /* border: 1px solid white; */
   width: 20vw;
-  aspect-ratio: 1/1;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #ccc;
+}
+
+.icon-container {
+  /* border-radius: 2rem;
+  overflow: hidden; */
 }
 
 .grid-item img {
@@ -29,4 +28,6 @@
 .text-container {
   padding: 2vh;
   text-align: center;
+  font-size: 2vh;
+  color: gray;
 }

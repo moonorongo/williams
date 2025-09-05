@@ -1,4 +1,4 @@
 {
-	"title" : "Contacts",
-	"gpio_pin" : 5
+	"title" : "Cámara",
+	"gpio_pin" : 3
 }

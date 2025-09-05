@@ -24,6 +24,8 @@
     }
   </style>
 </head>
+<?php include("include/helpers.php"); ?>
+<?php include("include/nav.php"); ?>
 <body>
   <!-- CONTENIDOS -->
   <div class="global-container"><!-- add class 'show-detail' to show detail view -->
@@ -33,78 +35,9 @@
     </div>
 
     <!-- MAIN NAV -->
-    <div class="main-nav-container">
+    <div class="main-nav-container" data-component="MainNav">
       <div class="grid-container">
-        
-        <div class="grid-row">
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_camera.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Cámara</div>
-          </div>
-        
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_email.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Email</div>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_contact.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Contactos</div>
-          </div>
-        </div>
-
-        <div class="grid-row">
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_calculator.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Calculadora</div>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_videogame.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Juegos</div>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_map.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Mapas</div>
-          </div>
-        </div>
-
-        <div class="grid-row">
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_music.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Música</div>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_phone.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Teléfono</div>
-          </div>
-
-          <div class="grid-item">
-            <div class="icon-container">
-              <img src="./assets/images/icons/icon_video.svg" alt="Cámara">
-            </div>
-            <div class="text-container">Videos</div>
-          </div>
-        </div>
-
+        <?php buildNavGrid(); ?>
       </div>
     </div>
     
@@ -126,6 +59,7 @@
 </body>
 <!-- Componentes JS -->
 <script type="text/javascript" src="./assets/js/swipe-scroller.js"></script>
+<script type="text/javascript" src="./assets/js/main-nav.js"></script>
 
 
 <!-- Main App -->
