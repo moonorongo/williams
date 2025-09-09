@@ -26,6 +26,7 @@
 </head>
 <?php include("include/helpers.php"); ?>
 <?php include("include/nav.php"); ?>
+<?php include("include/details.php"); ?>
 <body>
   <!-- CONTENIDOS -->
   <div class="global-container"><!-- add class 'show-detail' to show detail view -->
@@ -41,10 +42,17 @@
       </div>
     </div>
     
+  <!-- 
+    ya esta mas o menos los contenidos
+    pero no se si esta abriendo todo ok... cargar data correcta (por lo menos el titulo)
+    y despues modificar SwipeScroller para poder actualizar el height del contenedor
+  
+  -->
+
     <!-- MAiN CONTENT -->
     <div class="detail-container swipe-scroller" id="SmoothScroll" data-component="SwipeScroller">
       <div class="track">
-        <?php include("content/03/content.html"); ?>
+        <?php buildDetails(); ?>
       </div>
     </div>
 

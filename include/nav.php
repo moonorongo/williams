@@ -6,20 +6,30 @@ function buildNavGrid() {
 
     foreach ($chuncked_files as $files) {
         echo '<div class="grid-row">';
-        foreach ($files as $key => $folder) {
-            $data = file_get_contents("./content/$folder/config.json");
-            $jsonData = json_decode($data, true);
-            $title = $jsonData['title'];
 
-            echo('
-                <div class="grid-item js-icon-action" data-key="folder-'. $folder .'">
-                    <div class="icon-container">
-                        <img src="../content/'. $folder .'/icon.svg" />
+        for($i=0; $i<3; $i++) {
+            $total_row_files = count($files);
+
+            if($i < $total_row_files) {
+                $folder = $files[$i];
+                $data = file_get_contents("./content/$folder/config.json");
+                $jsonData = json_decode($data, true);
+                $title = $jsonData['title'];
+
+                echo('
+                    <div class="grid-item js-icon-action" data-key="folder-'. $folder .'">
+                        <div class="icon-container">
+                            <img src="../content/'. $folder .'/icon.svg" />
+                        </div>
+                        <div class="text-container">'. $title .'</div>
                     </div>
-                    <div class="text-container">'. $title .'</div>
-                </div>
-            ');
+                ');
+            } else {
+                echo('<div class="grid-item">&nbsp;</div>');
+            }
         }
+
         echo '</div>';
     }
+
 }
