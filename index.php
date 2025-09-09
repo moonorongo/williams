@@ -22,6 +22,10 @@
     html {
       overflow : hidden;
     }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <?php include("include/helpers.php"); ?>
@@ -29,10 +33,10 @@
 <?php include("include/details.php"); ?>
 <body>
   <!-- CONTENIDOS -->
-  <div class="global-container"><!-- add class 'show-detail' to show detail view -->
+  <div class="global-container show-detail"><!-- add class 'show-detail' to show detail view -->
     <!-- TOP BAR -->
     <div class="top-bar-container">
-      top bar contents
+      <button class="js-back">Back</button>
     </div>
 
     <!-- MAIN NAV -->
@@ -46,7 +50,6 @@
     ya esta mas o menos los contenidos
     pero no se si esta abriendo todo ok... cargar data correcta (por lo menos el titulo)
     y despues modificar SwipeScroller para poder actualizar el height del contenedor
-  
   -->
 
     <!-- MAiN CONTENT -->

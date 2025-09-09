@@ -22,6 +22,21 @@ class SwipeScroller {
             // reset scroll position to top
             this.resetScroll();
         }, 100);
+
+        window.resetSwiper = this.resetSwiper.bind(this)
+    }
+
+    resetSwiper() {
+        this.isSliding = false;
+        this.dragging = false
+        this.position = 0;
+        this.velocity = 0;
+
+        this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - 800; // 800px extra space at the bottom  
+        this.bindEvents();
+        this.resetScroll();
+
+        console.log(this.maxHeight)
     }
 
     bindEvents() {

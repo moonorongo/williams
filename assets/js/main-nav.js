@@ -3,7 +3,8 @@ class MainNav {
         this.$el = element;
         this.$globalContainer = document.querySelector('.global-container');
         this.$navElements = this.$el.querySelectorAll('.js-icon-action')
-        this.$contentElements = this.$el.querySelectorAll('.js-content')
+        this.$contentElements = document.querySelectorAll('.js-content')
+        this.$backButton = document.querySelector('.js-back')
         
         this.bindEvents()
     }
@@ -17,6 +18,11 @@ class MainNav {
                 this.$globalContainer.classList.add('show-detail')
             });
         });
+
+        this.$backButton.addEventListener('click', () => {
+            this.$globalContainer.classList.remove('show-detail')
+            this.hideDetails()
+        })
     }
 
 
@@ -30,11 +36,10 @@ class MainNav {
 
     showDetails(key) {
         this.$contentElements.forEach(element => {
-            if(element.dataset.key === key) {
+            if(element.dataset.id === key) {
                 element.classList.remove('hidden')
             }
         });
-
     }
 
 }
