@@ -67,3 +67,16 @@
 }
 
 
+/* DEBUG */
+.js-debug {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    z-index: 9000;
+    font-size: 4vw;
+    border: 3px solid black;
+}
+

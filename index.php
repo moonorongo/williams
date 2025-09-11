@@ -33,7 +33,7 @@
 <?php include("include/details.php"); ?>
 <body>
   <!-- CONTENIDOS -->
-  <div class="global-container show-detail"><!-- add class 'show-detail' to show detail view -->
+  <div class="global-container show-detail2"><!-- add class 'show-detail' to show detail view -->
     <!-- TOP BAR -->
     <div class="top-bar-container">
       <button class="js-back">Back</button>
@@ -47,9 +47,10 @@
     </div>
     
   <!-- 
-    ya esta mas o menos los contenidos
-    pero no se si esta abriendo todo ok... cargar data correcta (por lo menos el titulo)
-    y despues modificar SwipeScroller para poder actualizar el height del contenedor
+    el scroll mas o menos creo q esta corregido.
+    Al abrir un menu habra que llamar a window.resetSwiper()
+    por otro lado, si el contenido es menor a la altura de la pantalla entonces habria que deshabilitar los checkeos y el scroll en general
+    mañana ver eso.
   -->
 
     <!-- MAiN CONTENT -->
@@ -66,6 +67,8 @@
 
   </div><!-- .global-container -->
 
+  <!-- DEBUG -->
+  <div class="debug-info-container js-debug"></div>
 
 </body>
 <!-- Componentes JS -->

@@ -3,16 +3,18 @@ class SwipeScroller {
         window.scrollTo(0,0)
         this.$el = element;
         this.$track = this.$el.querySelector('.track');
+        this.$debugContainer = document.querySelector('.js-debug');
 
         this.isSliding = false;
         this.dragging = false
         this.position = 0;
         this.velocity = 0;
         this.desceleration = 1
+        this.extraSpacePercent = window.innerHeight * .37 // 37% extra space
 
         // Wait for images to load to ensure accurate maxHeight calculation
         window.addEventListener('load', () => {
-            this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - 800; // 800px extra space at the bottom  
+            this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - this.extraSpacePercent; 
             this.bindEvents();
             this.animate();
         });
@@ -32,11 +34,11 @@ class SwipeScroller {
         this.position = 0;
         this.velocity = 0;
 
-        this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - 800; // 800px extra space at the bottom  
-        this.bindEvents();
+        this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - this.extraSpacePercent;
+        // this.bindEvents();
         this.resetScroll();
 
-        console.log(this.maxHeight)
+        // console.log(this.maxHeight)
     }
 
     bindEvents() {
@@ -75,7 +77,8 @@ class SwipeScroller {
         // Update this.maxHeight on resize window
         window.addEventListener('resize', () => {
             this.resetScroll();
-            this.maxHeight = -(this.$el.clientHeight - window.innerHeight);
+            this.extraSpacePercent = window.innerHeight * .37 // 37% extra space
+            this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - this.extraSpacePercent;
         });
     }
 
@@ -120,6 +123,14 @@ class SwipeScroller {
         }
 
         this.setTransform(this.position);
+
+        // debug
+        this.$debugContainer.innerHTML = `
+        Velocity: ${this.velocity}<br />
+        Position: ${this.position}<br />
+        Max Height: ${this.maxHeight}<br />
+        Window innerHeight: ${window.innerHeight}<br />
+        `
     }
 
     animate() {
