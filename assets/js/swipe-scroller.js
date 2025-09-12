@@ -11,10 +11,12 @@ class SwipeScroller {
         this.velocity = 0;
         this.desceleration = 1
         this.extraSpacePercent = window.innerHeight * .37 // 37% extra space
+        this.scrollEnabled = false
 
         // Wait for images to load to ensure accurate maxHeight calculation
         window.addEventListener('load', () => {
             this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - this.extraSpacePercent; 
+            this.scrollEnabled = (this.$el.clientHeight + this.extraSpacePercent) > window.innerHeight;
             this.bindEvents();
             this.animate();
         });
@@ -35,10 +37,8 @@ class SwipeScroller {
         this.velocity = 0;
 
         this.maxHeight = -(this.$el.clientHeight - window.innerHeight) - this.extraSpacePercent;
-        // this.bindEvents();
+        this.scrollEnabled = (this.$el.clientHeight + this.extraSpacePercent) > window.innerHeight;
         this.resetScroll();
-
-        // console.log(this.maxHeight)
     }
 
     bindEvents() {
@@ -122,15 +122,19 @@ class SwipeScroller {
             this.position = 0;
         }
 
-        this.setTransform(this.position);
+        this.scrollEnabled && this.setTransform(this.position);
 
         // debug
-        this.$debugContainer.innerHTML = `
-        Velocity: ${this.velocity}<br />
-        Position: ${this.position}<br />
-        Max Height: ${this.maxHeight}<br />
-        Window innerHeight: ${window.innerHeight}<br />
-        `
+        if(this.$debugContainer) {
+            this.$debugContainer.innerHTML = `
+            Position: ${this.position}<br />
+            Max Height: ${this.maxHeight}<br />
+            Window innerHeight: ${window.innerHeight}<br />
+            height container: ${this.$el.clientHeight}<br />
+            extra space: ${this.extraSpacePercent}<br />
+            `
+        }
+        
     }
 
     animate() {

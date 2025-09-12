@@ -16,12 +16,18 @@ class MainNav {
                 this.hideDetails();
                 this.showDetails(e.currentTarget.dataset.key);
                 this.$globalContainer.classList.add('show-detail')
+                window.resetSwiper()
             });
         });
 
         this.$backButton.addEventListener('click', () => {
+            window.resetSwiper()
             this.$globalContainer.classList.remove('show-detail')
-            this.hideDetails()
+            
+            // add a bit of delay, waiting for transition
+            setTimeout(() => {
+                this.hideDetails()
+            }, 500)
         })
     }
 

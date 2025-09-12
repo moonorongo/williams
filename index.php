@@ -47,10 +47,8 @@
     </div>
     
   <!-- 
-    el scroll mas o menos creo q esta corregido.
-    Al abrir un menu habra que llamar a window.resetSwiper()
-    por otro lado, si el contenido es menor a la altura de la pantalla entonces habria que deshabilitar los checkeos y el scroll en general
-    mañana ver eso.
+    mañana: ver el tema de las transiciones putas,
+    buscar algo sencillo para transicionar.
   -->
 
     <!-- MAiN CONTENT -->
@@ -68,7 +66,7 @@
   </div><!-- .global-container -->
 
   <!-- DEBUG -->
-  <div class="debug-info-container js-debug"></div>
+  <!-- <div class="debug-info-container js-debug"></div> -->
 
 </body>
 <!-- Componentes JS -->
