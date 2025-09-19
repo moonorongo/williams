@@ -34,10 +34,10 @@
 <?php include("include/details.php"); ?>
 <body>
   <!-- CONTENIDOS -->
-  <div class="global-container show-detail2"><!-- add class 'show-detail' to show detail view -->
+  <div class="global-container"><!-- add class 'show-detail' to show detail view -->
     <!-- TOP BAR -->
     <div class="top-bar-container">
-      <button class="js-back">Back</button>
+      <!-- <button class="js-back">Back</button> -->
     </div>
 
     <!-- MAIN NAV -->
@@ -48,8 +48,20 @@
     </div>
     
   <!-- 
-    mañana: ver el tema de las transiciones putas,
-    buscar algo sencillo para transicionar.
+    notas seba
+
+      El subtítulo de ahí es para mí lo que debería ser como mínimo el texto. Tal vez más grande incluso un punto
+
+      El chiquito lo dejaría para copirights abajo de fotos pero es incómodo de leer
+
+      No tiene antialiasing
+
+      
+
+
+
+
+
   -->
 
     <!-- MAiN CONTENT -->
@@ -61,7 +73,7 @@
 
     <!-- BOTTOM BAR -->
     <div class="bottom-bar-container">
-      bottom bar contents
+      <button class="js-back">Back</button>
     </div>
 
   </div><!-- .global-container -->
