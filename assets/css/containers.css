@@ -12,11 +12,12 @@
 }
 
 .global-container.show-detail .detail-container {
-    top: 10vh;
     transform: scale(1);
     opacity: 1;
     pointer-events: all;
 }
+
+
 
 .top-bar-container {
   position: absolute;
@@ -60,8 +61,7 @@
     transition: all 0.5s ease 0s;
 
     /* animations initial state */
-    /* top: -30vh; */
-    /* transform: scale(.75); */
+    top: 10vh;
     opacity: 0;
     pointer-events: none;
 }
